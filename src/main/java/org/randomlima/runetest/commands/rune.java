@@ -51,7 +51,7 @@ public class rune implements CommandExecutor {
         }
 
 
-        ItemStack runeItem = createRuneItem(runeName, runeLevel);
+        ItemStack runeItem = getRune(runeName, runeLevel);
 
         Player player = (Player) sender;
         player.getInventory().addItem(runeItem);
@@ -59,13 +59,38 @@ public class rune implements CommandExecutor {
         return true;
     }
 
-    private ItemStack createRuneItem(String runeName, int level) {
+//    private ItemStack createRuneItem(String runeName, int level) {
+//        ConfigurationSection runeSection = plugin.getConfig().getConfigurationSection("runes." + runeName.toLowerCase());
+//        if(runeSection == null){return null;}
+//
+//        String display = Colorize.format(runeSection.getString("display"));
+//        //boolean toggle = runeSection.getBoolean("toggle");
+//        //double levelScaling = runeSection.getDouble("level-scaling");
+//        List<String> description = runeSection.getStringList("description");
+//
+//        ItemStack runeItem = new ItemStack(Material.ENCHANTED_BOOK);
+//        ItemMeta meta = runeItem.getItemMeta();
+//        meta.setDisplayName(display);
+//
+//        List<String> lore = new ArrayList<>();
+//        for (String line : description) {
+//            lore.add(Colorize.format(line));
+//        }
+//        lore.add(Colorize.format("&5Level: &d"+level));
+//        meta.setLore(lore);
+//
+//        PersistentDataContainer data = meta.getPersistentDataContainer();
+//        NamespacedKey key = new NamespacedKey(plugin, "rune-type");
+//        data.set(key, PersistentDataType.STRING, "rune");
+//
+//        runeItem.setItemMeta(meta);
+//        return runeItem;
+//    }
+    public ItemStack getRune(String runeName, int level){
         ConfigurationSection runeSection = plugin.getConfig().getConfigurationSection("runes." + runeName.toLowerCase());
         if(runeSection == null){return null;}
 
         String display = Colorize.format(runeSection.getString("display"));
-        //boolean toggle = runeSection.getBoolean("toggle");
-        //double levelScaling = runeSection.getDouble("level-scaling");
         List<String> description = runeSection.getStringList("description");
 
         ItemStack runeItem = new ItemStack(Material.ENCHANTED_BOOK);
