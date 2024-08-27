@@ -1,0 +1,39 @@
+runes:
+  shield:
+    display: '&8Shield'
+    toggle: false # false = always active, true = right-click to activate
+    damage-reduction: 10.0 # percentage
+    level-scaling: 2.0 # multiply level by stats (level 2 shield rune will reduce damage taken by 20%)
+    description:
+      - '&8- &fReduce incoming damage by  10% per level'
+  balance:
+    display: '&8Balance'
+    toggle: false # false = always active, true = right-click to activate
+    damage-reduction: 15.0 # percentage
+    level-scaling: 2.0 # multiply level by stats (level 2 shield rune will reduce damage taken by 20%)
+    description:
+      - '&8- &fReduce fall damage by 15% per level'
+  melee:
+    display: '&8Swordsman'
+    toggle: false
+    melee-damage-increase: 10.0 # percentage
+    level-scaling: 2.0
+    description:
+      - '&8- &fDeal more melee damage by 10% per level'
+  ranged:
+    display: '&8Archer'
+    toggle: false
+    ranged-damage-increase: 10.0 # percentage
+    level-scaling: 2.0
+    description:
+      - '&8- &fDeal more ranged damage by 10% per level'
+  telekinesis:
+    display: '&8Telekinesis'
+    toggle: true
+    range: 10.0
+    y-velocity: 2.0
+    x-velocity: 1.5
+    cooldown: 5 # seconds
+    level-scaling: 0.5
+    description:
+      - '&8- &fLaunch your enemies away from you'
