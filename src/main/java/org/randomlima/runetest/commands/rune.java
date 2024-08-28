@@ -12,12 +12,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.jetbrains.annotations.NotNull;
-import org.randomlima.runetest.Colorize;
+import org.randomlima.runetest.utilities.Colorize;
 import org.randomlima.runetest.RuneTest;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class rune implements CommandExecutor {
     private RuneTest plugin;

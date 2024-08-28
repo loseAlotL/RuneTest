@@ -1,4 +1,4 @@
-package org.randomlima.runetest;
+package org.randomlima.runetest.utilities;
 
 import org.bukkit.ChatColor;
 
